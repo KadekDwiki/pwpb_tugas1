@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bgcolor: #03071e;
+  --color: #ede8f0;
+}
+
+body {
+  background-color: var(--bgcolor);
+  color: var(--color);
+}
+.container {
+  height: 100vh;
+  width: 100%;
+}
+/* =========== navbar ============ */
+nav {
+  background: #0f2027;
+  background: linear-gradient(to right, #03071e, #0d2544, #134379);
+  height: 60px;
+}
+.nav-logo {
+  line-height: 100px;
+  padding: 20px 50px;
+  display: inline;
+}
+
+nav ul {
+  margin-right: 30px;
+  float: right;
+}
+nav ul li {
+  display: inline-block;
+  margin: 20px 10px;
+}
+nav ul li a {
+  list-style: none;
+  text-decoration: none;
+  padding: 7px 13px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--color);
+}
+a:hover {
+  background: #22577a;
+  transition: 0.7s;
+}
+
+/* =========== Beranda =========== */
+.container-beranda {
+  background-image: url("");
+}
