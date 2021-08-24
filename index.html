@@ -5,72 +5,127 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- link css  -->
-
+    <!--  link css   -->
+    <link rel="stylesheet" href="assets_home_page/css/style.css" />
     <!-- link font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/9d320cccf7.js" crossorigin="anonymous"></script>
     <!-- browser icon -->
-
+    <link rel="shortcut icon" href="assets_home_page/img/1486485581-account-audience-person-customer-profile-user_81164.ico" />
     <title>Kelompok 5 | Mengenal Nama Nama Planet</title>
   </head>
   <body>
     <!-- navbar -->
     <nav>
+      <div class="nav-logo">
+        <img src="assets_home_page/img/planets.svg" alt="navbar logo" width="40" />
+      </div>
       <ul>
-        <li class="nav-item" href="#">Beranda</li>
-        <li class="nav-item" href="#planet">Nama Planet</li>
-        <li class="nav-item" href="#tentang">Tentang Kami</li>
-        <li class="nav-item" href="#contact">Kontak</li>
+        <li class="nav-link">
+          <a href="#"><i class="fas fa-home"></i> Beranda</a>
+        </li>
+        <li class="nav-link">
+          <a href="#planet"><i class="fas fa-globe"></i> Nama Planet</a>
+        </li>
+        <li class="nav-link">
+          <a href="#anggota"><i class="fas fa-user"></i> Tentang Kami</a>
+        </li>
+        <li class="nav-link">
+          <a href="#kontak"><i class="fas fa-envelope"></i> Kontak</a>
+        </li>
       </ul>
     </nav>
     <!-- akhir navbar -->
     <section id="beranda" class="beranda">
       <div class="container container-beranda">
-        <h1>selamat datang di website kelompok kami</h1>
-        <p>Pada website ini kalian akan belajar mengenal nama nama planet yang ada di tata surya kita ini.</p>
+        <div class="beranda-text">
+          <h1>belajar <span>planet</span></h1>
+          <p class="galaksi">Galaksi Bima Sakti</p>
+          <p class="desc-jumbotron">belajar mengenal nama-nama planet yang ada di galaksi Bima Sakti</p>
+        </div>
+        <img src="assets_home_page/img/img-astronot-2.svg" class="img-jumbotron" alt="astronot ilustrasi" />
       </div>
     </section>
-    <section id="planet" class="planet-menu">
+    <section id="planet" class="planet">
       <div class="container container-planet">
-        <div class="row row-planet">
-          <div class="col col-planet">
-            <h2>Mengenal Planet</h2>
-            <p>Tau kah kalian apa itu tata surya atau apa saja benda-benda langit penyusunnya?</p>
+        <div class="judul-planet">
+          <h2>Mengenal Planet</h2>
+          <div class="line"></div>
+        </div>
+        <div class="col col-planet">
+          <div class="ilustrasi-img">
+            <img src="assets_home_page/img/learn-astronomy.png" alt="ilustrasi Galaksi Bima Sakti" width="400" />
+          </div>
+          <div class="desc">
             <p>
-              Tata Surya merupakan kumpulan benda langit yang terdiri atas sebuah bintang yang disebut Matahari dan semua objek yang terikat oleh gaya gravitasinya. Objek-objek tersebut termasuk delapan buah planet yang sudah diketahui
-              dengan orbit berbentuk elips, lima planet kerdil/katai, 173 satelit alami yang telah diidentifikasi, dan jutaan benda langit (meteor, asteroid, komet) lainnya.
+              <span>Tata Surya</span> adalah kumpulan benda langit yang terdiri atas sebuah bintang yang disebut Matahari dan semua objek yang terikat oleh gaya gravitasinya. Objek-objek tersebut termasuk delapan buah planet yang sudah diketahui dengan
+              orbit berbentuk elips, lima planet kerdil/katai, 173 satelit alami yang telah diidentifikasi, dan jutaan benda langit (meteor, asteroid, komet) lainnya.
             </p>
-            <p>Tata Surya terbagi menjadi</p>
-            <ol>
+            <p>Tata Surya terbagi menjadi :</p>
+            <ol type="1">
               <li>Matahari</li>
               <li>Empat planet bagian dalam</li>
               <li>Sabuk asteroid</li>
               <li>Empat planet bagian luar</li>
               <li>Sabuk Kuiper dan piringan tersebar (bagian terluar)</li>
             </ol>
-          </div>
-          <div class="col col-planet-img">
-            <img src="assets_home_page/jumbotron-desktop.jpg" alt="" />
-          </div>
-        </div>
-        <div class="row row-nav-planet">
-          <p>nah kali ini kita akan membahas planet apa aja sih yang ada di sistem tata surya kita, berikut nama nama planet tersebut</p>
-          <div class="col col-menu-planet">
-            <label><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">merkurius</a></label>
-            <label><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">venus</a></label>
-            <label><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">bumi</a></label>
-            <label><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">mars</a></label>
-            <label><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">jupiter</a></label>
-            <label><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">saturnus</a></label>
-            <label><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">uranus</a></label>
-            <label><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">neptunus</a></label>
+            <p>
+             kali ini kita akan membahas planet apa aja sih yang ada di sistem tata surya kita, berikut nama nama planet yang ada di sistem tata Surya kita ini</p>
+            </p>
           </div>
         </div>
       </div>
     </section>
+    <section id="menu-planet" class="menu-planet">
+      <div class="container planet-card">
+        <div class="card card1">
+          <img src="assets_home_page/img/solar-system.svg" alt="merkurius">
+          <p>merkurius adalah planet bagi para alien alienjahat.....</p>
+          <button><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">merkurius</a></button>
+        </div>
+        <div class="card card2">
+          <img src="assets_home_page/img/solar-system.svg" alt="merkurius">
+          <p>merkurius adalah planet bagi para alien alienjahat.....</p>
+          <button><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">merkurius</a></button>
+        </div>
+        <div class="card card3">
+          <img src="assets_home_page/img/solar-system.svg" alt="merkurius">
+          <p>merkurius adalah planet bagi para alien alienjahat.....</p>
+          <button><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">merkurius</a></button>
+        </div>
+        <div class="card card4">
+          <img src="assets_home_page/img/solar-system.svg" alt="merkurius">
+          <p>merkurius adalah planet bagi para alien alienjahat.....</p>
+          <button><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">merkurius</a></button>
+        </div>
+        <div class="card card5">
+          <img src="assets_home_page/img/solar-system.svg" alt="merkurius">
+          <p>merkurius adalah planet bagi para alien alienjahat.....</p>
+          <button><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">merkurius</a></button>
+        </div>
+        <div class="card card6">
+          <img src="assets_home_page/img/solar-system.svg" alt="merkurius">
+          <p>merkurius adalah planet bagi para alien alienjahat.....</p>
+          <button><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">merkurius</a></button>
+        </div>
+        <div class="card card7">
+          <img src="assets_home_page/img/solar-system.svg" alt="merkurius">
+          <p>merkurius adalah planet bagi para alien alienjahat.....</p>
+          <button><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">merkurius</a></button>
+        </div>
+        <div class="card card8">
+          <img src="assets_home_page/img/solar-system.svg" alt="merkurius">
+          <p>merkurius adalah planet bagi para alien alienjahat.....</p>
+          <button><a href="https://www.gramedia.com/literasi/sistem-tata-surya/">merkurius</a></button>
+        </div>
+        
+      </div>
+    </section>
     <section id="anggota" class="anggota">
       <div class="container container-anggota">
-        <h2>Anggota</h2>
+        <div class="judul-planet">
+          <h2>Anggota</h2>
+          <div class="line"></div>
+        </div>
         <div class="nama-anggota">
           <p><a href="dwiki/dwiki.html" target="blank">I Kadek Dwiki Nusanjaya (08)</a></p>
           <p><a href="https://iketutpandesuparsa.github.io/IketutPandeSuparsa/indexX.html" target="blank">I Ketut Pande Suparsa (09)</a></p>
@@ -81,7 +136,10 @@
     </section>
     <section id="kontak" class="kontak">
       <div class="container container-kontak">
-        <h2>Kontak</h2>
+       <div class="judul-planet">
+          <h2>Kontak</h2>
+          <div class="line"></div>
+        </div>
         <form>
           <div class="form-item">
             <label>Nama</label>
@@ -105,7 +163,9 @@
         </form>
       </div>
     </section>
-
+    <section id="sumber" class="sumber">
+      <div class="container-sumber">Illustration by <a href="https://icons8.com/illustrations/author/5eb423ee01d03600140dff88">Tatiana Vinogradova</a> from <a href="https://icons8.com/illustrations">Ouch!</a></div>
+    </section>
     <footer>
       <p>dwiki | pande | adit | arik</p>
     </footer>
