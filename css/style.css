@@ -1,14 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 :root {
-  --bgcolor: rgb(0, 0, 0);
+  --bgcolor: #010508;
   --color: #dddddd;
   --bgcontainer: rgb(7, 6, 10);
   --titlecolor: #00a4f0;
-  --bg-card: rgba(0, 79, 170, 0.616);
+  --bg-card: #030f2b;
+  --padding-btm: 5rem;
+  --padding-top: 3rem;
 }
 html {
   scroll-behavior: smooth;
@@ -18,26 +21,41 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--bgcolor);
 }
+section {
+  width: 100%;
+}
 .container {
   width: 100%;
 }
 h2 {
+  position: relative;
   color: var(--titlecolor);
   font-size: 1.8rem;
   padding: 20px 10px 5px 10px;
+  text-shadow: 0px 0px 40px #00a4f0;
 }
-
+p,
+ol {
+  font-family: "Poppins", sans-serif;
+}
 .line {
   background-color: white;
   width: 500px;
   height: 1px;
   margin-top: 5px;
 }
+.judul-planet {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
 
 /* =========== navbar ============ */
 nav {
   background: #0f2027;
-  background: linear-gradient(to right, #03387e, #034977, #134379);
+  background: var(--bgcolor);
   height: 60px;
   position: fixed;
   z-index: 10;
@@ -50,8 +68,8 @@ nav {
 }
 
 nav ul {
-  margin-right: 30px;
   float: right;
+  padding-right: 30px;
 }
 nav ul li {
   display: inline-block;
@@ -71,18 +89,32 @@ ul li a:hover {
   transition: 0.7s;
 }
 
+.checkbtn {
+  font-size: 1.3rem;
+  color: white;
+  float: right;
+  line-height: 60px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
 /* =========== Beranda =========== */
 .beranda {
-  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.747)), url("../assets_home_page/img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  animation: slide 20s ease-in-out 1s infinite;
+  height: 100vh;
+  background-position: center;
 }
-
 .img-jumbotron {
   position: absolute;
   right: 0;
-  top: 130px;
-  width: 550px;
+  top: 50px;
+  width: 700px;
 }
 .beranda-text {
   position: absolute;
@@ -95,17 +127,16 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--color);
   font-size: 2.5rem;
   font-family: sans-serif;
+  text-shadow: 0px 0px 30px #00a4f0;
 }
 h1 span {
   position: absolute;
   left: 200px;
   top: 50px;
-  color: #000;
-  background-color: #0965ce;
-
+  color: --color;
   padding: 10px;
   border-radius: 5px;
 }
@@ -126,45 +157,14 @@ h1 span {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* beranda animation */
-@keyframes slide {
-  0% {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.178), rgba(0, 0, 0, 1)), url("../assets_home_page/img/jumbotron-desktop1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  25% {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.178), rgba(0, 0, 0, 1)), url("../assets_home_page/img/slide1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  50% {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.178), rgba(0, 0, 0, 1)), url("../assets_home_page/img/slide2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  75% {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.178), rgba(0, 0, 0, 1)), url("../assets_home_page/img/slide4.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  100% {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.178), rgba(0, 0, 0, 1)), url("../assets_home_page/img/slide3.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
 /* =========== Bagian Planet ======== */
 .container-planet {
-  padding-top: 50px;
+  padding-top: 30px;
+  width: 100%;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
 }
-.judul-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 .col-planet {
   display: grid;
   grid-template-columns: 1fr, 1.3fr;
@@ -183,6 +183,7 @@ h1 span {
   grid-area: "img";
   padding-top: 40px;
 }
+
 .desc p span {
   font-size: 2rem;
   color: #fff;
@@ -193,29 +194,38 @@ h1 span {
 ol li {
   transform: translateX(40px);
 }
-/* ========== bagian card planet */
+/* ========== bagian card planet ============== */
 .menu-planet {
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: var(--bgcolor);
   height: max-content;
+  padding-bottom: var(--padding-btm);
 }
 .planet-card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 .card {
-  width: 250px;
+  max-width: 250px;
   height: 350px;
   background-color: var(--bg-card);
   border-radius: 7px;
   padding: 5px;
   margin: 20px;
-  box-shadow: 5px 5px 1px#0154b3;
+  box-shadow: 1px 3px#00a4f0;
+  transition: 0.5s;
+}
+.card:hover {
+  background: #00b4db;
+  background: -webkit-linear-gradient(to right, #0083b0, #00b4db);
+  background: linear-gradient(to right, #0083b0, #00b4db);
+  color: var(--bgcolor);
+  box-shadow: none;
 }
 .card img {
   display: flex;
@@ -225,6 +235,7 @@ ol li {
 }
 .card p {
   padding: 5px;
+  max-width: 250px;
 }
 .card p span {
   color: var(--titlecolor);
@@ -237,7 +248,7 @@ ol li {
   border: none;
   border-radius: 5px;
   margin: 5px;
-  background-color: rgb(163, 170, 255);
+  background-color: #2c8eff;
   transition: 0.3s;
 }
 .card a {
@@ -248,9 +259,209 @@ ol li {
 }
 .card button:hover {
   background-color: #0d2544;
+  border: 1px solid #0071f1;
+  color: var(--color);
+}
+.card a:hover {
+  color: var(--color);
+}
+
+/* ==================== profil card ================*/
+.container-anggota {
+  width: 100%;
+  height: 100vh;
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-btm);
+}
+.nama-anggota {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: var(--bgcolor);
+  height: max-content;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.card-profil {
+  width: 200px;
+  height: 300px;
+  background-color: var(--bg-card);
+  border-radius: 7px;
+  padding: 5px;
+  margin: 20px;
+}
+.card-profil:hover {
+  box-shadow: 1px 3px 10px#00a4f0;
+}
+.card-profil img {
+  display: flex;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  margin: 10px auto;
+  border: 3px solid #00a4f0;
+  border-radius: 50%;
+}
+.card-profil p {
+  padding: 5px;
+}
+.card-profil p span {
+  color: var(--titlecolor);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.card-profil .sosmed {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.card-profil .sosmed i {
+  font-size: 1rem;
+  margin: 10px;
+}
+.card-profil .sosmed a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  margin: 10px;
+}
+.card-profil button:hover {
+  background-color: #0d2544;
   border: 2px solid #2c8eff;
   color: var(--color);
 }
-.card button a:hover {
+.card-profil button a:hover {
   color: var(--color);
+}
+
+/* =========== kontak =============== */
+
+.container-kontak {
+  width: 100%;
+  height: 100vh;
+  padding-top: var(--padding-top);
+}
+.col-contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.ilustrasi-contact {
+  padding-top: 30px;
+}
+form {
+  margin-top: var(--padding-top);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-left: var(--padding-btm);
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  background: #36d1dc;
+  background: -webkit-linear-gradient(to right, #5b86e5, #36d1dc);
+  background: linear-gradient(to right, #5b86e5, #36d1dc);
+
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+}
+.form-item {
+  width: 90%;
+  margin: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.form-item :nth-last-child() {
+  background-color: var(--bg-card);
+}
+label {
+  margin: 0 0 10px 0;
+}
+input {
+  height: 30px;
+  border-radius: 5px;
+  border: unset;
+}
+.button-contact {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: unset;
+  box-shadow: 3px 3px 5px #2f80ed;
+  background: #0069be;
+  color: var(--color);
+  transition: 0.7s;
+}
+.button-contact:hover {
+  background-color: #2c8eff;
+}
+textarea {
+  border-radius: 5px;
+  height: 10%;
+}
+
+/* ===========foooter============= */
+.container-sumber {
+  height: 40vh;
+  background-color: #071118;
+}
+.sumber {
+  padding: 30px;
+}
+.sumber p {
+  text-align: start;
+  margin: 10px;
+  color: var(--color);
+  background-color: #071118;
+}
+footer {
+  height: 30vh;
+}
+footer p {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--bg-card);
+}
+
+/* ====================== tempat animation ======================= */
+
+/* ============== RESPONSIF ==================================== */
+/* ============== tablet ================== */
+@media (max-width: 992px) {
+  nav ul li a {
+    font-size: 1rem;
+  }
+}
+
+/* ============== mobile ( hanphone)============== */
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 40vh;
+    background: #000000e8;
+    top: 60px;
+    right: -200%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 15px;
+    line-height: 40px;
+    z-index: 5;
+  }
+  nav ul li a {
+    font-size: 1rem;
+  }
+  #check:checked ~ ul {
+    right: 0;
+  }
 }
