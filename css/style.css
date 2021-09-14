@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+/* download font */
+@font-face {
+  font-family: "atmospheric";
+  src: url("../font/aAtmospheric.otf");
+}
+
+/* ============================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +19,7 @@
   --bg-card: #030f2b;
   --padding-btm: 5rem;
   --padding-top: 3rem;
+  --width: 98%;
 }
 html {
   scroll-behavior: smooth;
@@ -21,11 +29,15 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--bgcolor);
 }
-section {
-  width: 100%;
-}
 .container {
-  width: 100%;
+  width: var(--width);
+}
+section {
+  width: 99.7%;
+  display: flex;
+  margin-right: 0;
+  align-items: center;
+  flex-direction: column;
 }
 h2 {
   position: relative;
@@ -33,16 +45,18 @@ h2 {
   font-size: 1.8rem;
   padding: 20px 10px 5px 10px;
   text-shadow: 0px 0px 40px #00a4f0;
+  font-family: "atmospheric", sans-serif;
 }
 p,
 ol {
   font-family: "Poppins", sans-serif;
 }
 .line {
-  background-color: white;
-  width: 500px;
+  background-color: #8edfff;
+  width: 50%;
   height: 1px;
   margin-top: 5px;
+  box-shadow: 0 0 5px #25baff;
 }
 .judul-planet {
   display: flex;
@@ -127,9 +141,9 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 20px;
-  color: var(--color);
-  font-size: 2.5rem;
-  font-family: sans-serif;
+  color: #a6e6ff;
+  font-size: 3rem;
+  font-family: "atmospheric", sans-serif;
   text-shadow: 0px 0px 30px #00a4f0;
 }
 h1 span {
@@ -160,7 +174,7 @@ h1 span {
 /* =========== Bagian Planet ======== */
 .container-planet {
   padding-top: 30px;
-  width: 100%;
+  width: var(--width);
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
 }
@@ -198,7 +212,7 @@ ol li {
 .menu-planet {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: var(--width);
   background-color: var(--bgcolor);
   height: max-content;
   padding-bottom: var(--padding-btm);
@@ -236,6 +250,7 @@ ol li {
 .card p {
   padding: 5px;
   max-width: 250px;
+  height: 130px;
 }
 .card p span {
   color: var(--titlecolor);
@@ -268,7 +283,7 @@ ol li {
 
 /* ==================== profil card ================*/
 .container-anggota {
-  width: 100%;
+  width: var(--width);
   height: 100vh;
   padding-top: var(--padding-top);
   padding-bottom: var(--padding-btm);
@@ -287,7 +302,7 @@ ol li {
 .card-profil {
   width: 200px;
   height: 300px;
-  background-color: var(--bg-card);
+  background-color: #142531;
   border-radius: 7px;
   padding: 5px;
   margin: 20px;
@@ -301,11 +316,12 @@ ol li {
   width: 130px;
   height: 130px;
   margin: 10px auto;
-  border: 3px solid #00a4f0;
+  border: 2px solid #0069be;
   border-radius: 50%;
 }
 .card-profil p {
   padding: 5px;
+  height: 70px;
 }
 .card-profil p span {
   color: var(--titlecolor);
@@ -339,7 +355,7 @@ ol li {
 /* =========== kontak =============== */
 
 .container-kontak {
-  width: 100%;
+  width: var(--width);
   height: 100vh;
   padding-top: var(--padding-top);
 }
@@ -426,8 +442,26 @@ footer p {
   padding: 10px;
   background-color: var(--bg-card);
 }
+/* =========================================================== MATERI MASING MASING PLANET ======================================================== */
+.materi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+.materi img {
+  width: 200px;
+  padding: 30px;
+}
+.container-materi {
+  background-color: #071118;
+  width: 92%;
+  padding: 20px;
+  color: var(--color);
+}
 
-/* ====================== tempat animation ======================= */
+/*============================================================ batas teritorial css masing masing materi planet ====================================  */
 
 /* ============== RESPONSIF ==================================== */
 /* ============== tablet ================== */
