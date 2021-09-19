@@ -12,9 +12,9 @@
   padding: 0;
 }
 :root {
-  --bgcolor: #010508;
-  --color: #dddddd;
-  --bgcontainer: rgb(7, 6, 10);
+  --bgcolor: #070707;
+  --color: #cecdcd;
+  --bgcontainer: rgb(20, 20, 22);
   --titlecolor: #00a4f0;
   --bg-card: #030f2b;
   --padding-btm: 5rem;
@@ -33,11 +33,11 @@ body {
   width: var(--width);
 }
 section {
-  width: 99.7%;
+  width: 100%;
   display: flex;
-  margin-right: 0;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 h2 {
   position: relative;
@@ -117,7 +117,7 @@ ul li a:hover {
 }
 /* =========== Beranda =========== */
 .beranda {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.747)), url("../assets_home_page/img/background.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), #010508), url("../assets_home_page/img/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -178,7 +178,34 @@ h1 span {
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
 }
-
+.col-planet {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: var(--width);
+  background-color: var(--bgcontainer);
+  margin: 20px auto;
+}
+.ilustrasi-img img {
+  margin: 0 50px 0 30px;
+}
+.desc {
+  width: 50%;
+}
+.desc p span {
+  font-size: 2rem;
+  color: #fff;
+}
+.desc p,
+ol {
+  text-align: justify;
+}
+.desc ol {
+  margin-left: 30px;
+}
+/*  
 .col-planet {
   display: grid;
   grid-template-columns: 1fr, 1.3fr;
@@ -210,22 +237,24 @@ ol li {
 }
 /* ========== bagian card planet ============== */
 .menu-planet {
-  display: flex;
-  justify-content: center;
   width: var(--width);
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-btm);
   background-color: var(--bgcolor);
   height: max-content;
   padding-bottom: var(--padding-btm);
+  margin: auto;
 }
 .planet-card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
+  width: var(--width);
 }
 .card {
-  max-width: 250px;
+  width: 250px;
   height: 350px;
   background-color: var(--bg-card);
   border-radius: 7px;
@@ -241,15 +270,19 @@ ol li {
   color: var(--bgcolor);
   box-shadow: none;
 }
+.card:hover img {
+  transform: translateY(-10px);
+}
 .card img {
   display: flex;
   justify-content: center;
   width: 150px;
   margin: 10px auto;
+  transition: 1s;
 }
 .card p {
   padding: 5px;
-  max-width: 250px;
+  width: 250px;
   height: 130px;
 }
 .card p span {
@@ -277,10 +310,9 @@ ol li {
   border: 1px solid #0071f1;
   color: var(--color);
 }
-.card a:hover {
+.card button:hover a {
   color: var(--color);
 }
-
 /* ==================== profil card ================*/
 .container-anggota {
   width: var(--width);
@@ -289,27 +321,28 @@ ol li {
   padding-bottom: var(--padding-btm);
 }
 .nama-anggota {
-  margin-top: 30px;
+  margin-top: 30px auto auto auto;
   display: flex;
-  justify-content: space-evenly;
   width: 100%;
-  background-color: var(--bgcolor);
   height: max-content;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
+  justify-content: center;
 }
 .card-profil {
   width: 200px;
-  height: 300px;
-  background-color: #142531;
+  height: max-content;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   border-radius: 7px;
   padding: 5px;
   margin: 20px;
 }
-.card-profil:hover {
-  box-shadow: 1px 3px 10px#00a4f0;
+.nama-anggota .card-profil-3,
+.nama-anggota .card-profil-4 {
+  background: linear-gradient(to left, #0f2027, #203a43, #2c5364);
 }
+
 .card-profil img {
   display: flex;
   justify-content: center;
@@ -331,7 +364,8 @@ ol li {
 .card-profil .sosmed {
   display: flex;
   justify-content: center;
-  margin: 10px;
+  background: linear-gradient(to right, #06beb6, #48b1bf);
+  border-radius: 0 0 5px 5px;
 }
 .card-profil .sosmed i {
   font-size: 1rem;
@@ -342,14 +376,11 @@ ol li {
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
   margin: 10px;
+  transition: 0.7s;
 }
-.card-profil button:hover {
-  background-color: #0d2544;
-  border: 2px solid #2c8eff;
-  color: var(--color);
-}
-.card-profil button a:hover {
-  color: var(--color);
+
+.card-profil a:hover {
+  color: var(--bgcontainer);
 }
 
 /* =========== kontak =============== */
@@ -448,9 +479,9 @@ footer p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 30px;
+  padding: 80px 30px 30px 30px;
 }
-.materi img {
+.materi .gambar-merkurius {
   width: 200px;
   padding: 30px;
 }
@@ -460,21 +491,103 @@ footer p {
   padding: 20px;
   color: var(--color);
 }
-
-/*============================================================ batas teritorial css masing masing materi planet ====================================  */
+.container-materi h3 {
+  padding: 30px 0 10px 0;
+  text-shadow: 0px 0px 20px #00a4f0;
+  color: var(--titlecolor);
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--titlecolor);
+}
+.container-materi p {
+  padding-top: 10px;
+  text-align: justify;
+}
+.container-materi ol li {
+  width: 95%;
+}
+.container-materi ol li h4 {
+  padding-top: 20px;
+}
+.container-materi .img-perbandingan-merkurius img {
+  width: 600px;
+  margin: 30px;
+  box-shadow: 0px 0px 30px #0080bb;
+}
+.container-materi img {
+  padding: 5px;
+  max-width: 700px;
+}
+.sumber-materi {
+  height: fit-content;
+  background-color: #071118;
+  padding: 30px;
+  text-align: start;
+  color: var(--titlecolor);
+  background-color: #071118;
+}
+.sumber-materi ul li {
+  padding: 10px;
+  margin-left: 40px;
+  list-style-type: none;
+}
+.sumber-materi ul li a {
+  color: var(--color);
+}
 
 /* ============== RESPONSIF ==================================== */
-/* ============== tablet ================== */
-@media (max-width: 992px) {
+@media (max-width: 1030px) {
+  body {
+    background-color: var(--bgcontainer);
+  }
+  .container-beranda .img-jumbotron {
+    display: none;
+  }
+  .container-anggota {
+    height: max-content;
+  }
   nav ul li a {
     font-size: 1rem;
+  }
+  .card-profil {
+    width: 30%;
+  }
+}
+/* ============== tablet ================== */
+@media (max-width: 998px) {
+  .container-anggota {
+    height: max-content;
+  }
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .desc {
+    width: 95%;
+    padding-bottom: 10px;
+  }
+  .container-kontak {
+    width: var(--width);
+    height: max-content;
+  }
+  form {
+    width: 100%;
+    margin: 20px;
   }
 }
 
 /* ============== mobile ( hanphone)============== */
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .checkbtn {
     display: block;
+  }
+  .container-beranda .beranda-text {
+    display: none;
+    flex-direction: column;
+
+    width: 50%;
+  }
+  h1 {
+    font-size: 2rem;
   }
   ul {
     position: fixed;
@@ -485,6 +598,9 @@ footer p {
     right: -200%;
     text-align: center;
     transition: all 0.5s;
+  }
+  nav {
+    width: 100%;
   }
   nav ul li {
     display: block;
@@ -497,5 +613,24 @@ footer p {
   }
   #check:checked ~ ul {
     right: 0;
+  }
+  .card-profil {
+    width: 200px;
+  }
+}
+
+/*  super small */
+@media (max-width: 678px) {
+  .planet-card .card {
+    width: 100%;
+    height: max-content;
+  }
+  .planet-card .card p {
+    width: 100%;
+    height: 100px;
+  }
+
+  .card-profil {
+    width: 100%;
   }
 }
