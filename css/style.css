@@ -131,11 +131,19 @@ ul li a:hover {
   width: 700px;
 }
 .beranda-text {
-  position: absolute;
-  left: 90px;
-  top: 150px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
   text-align: left;
   color: var(--color);
+}
+.beranda-text h1 {
+  display: flex;
+  flex-direction: column;
+}
+.beranda-text h1 span {
+  margin-left: 70px;
+  margin-top: 20px;
 }
 h1 {
   text-transform: uppercase;
@@ -147,25 +155,17 @@ h1 {
   text-shadow: 0px 0px 30px #00a4f0;
 }
 h1 span {
-  position: absolute;
-  left: 200px;
-  top: 50px;
   color: --color;
   padding: 10px;
   border-radius: 5px;
 }
 .galaksi {
-  position: absolute;
-  top: 190px;
   font-size: 1.3rem;
   width: max-content;
   color: var(--color);
 }
 .desc-jumbotron {
-  position: absolute;
-  top: 200px;
-  bottom: 150px;
-  margin-top: 30px;
+  margin-top: 10px;
   width: 450px;
   font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -205,36 +205,7 @@ ol {
 .desc ol {
   margin-left: 30px;
 }
-/*  
-.col-planet {
-  display: grid;
-  grid-template-columns: 1fr, 1.3fr;
-  justify-content: center;
-  align-items: center;
-  margin: 30px;
-  grid-template-areas: "img desc";
-}
-.desc {
-  margin-left: 80px;
-  grid-area: "desc";
-}
 
-.ilustrasi-img img {
-  margin-left: 30px;
-  grid-area: "img";
-  padding-top: 40px;
-}
-
-.desc p span {
-  font-size: 2rem;
-  color: #fff;
-}
-.desc p {
-  margin-top: 10px;
-}
-ol li {
-  transform: translateX(40px);
-}
 /* ========== bagian card planet ============== */
 .menu-planet {
   width: var(--width);
@@ -411,9 +382,8 @@ form {
   background: #36d1dc;
   background: -webkit-linear-gradient(to right, #5b86e5, #36d1dc);
   background: linear-gradient(to right, #5b86e5, #36d1dc);
-
-  backdrop-filter: blur(4px);
-  border-radius: 10px;
+  border-radius: 60px 0;
+  padding: 10px;
 }
 .form-item {
   width: 90%;
@@ -581,13 +551,12 @@ footer p {
     display: block;
   }
   .container-beranda .beranda-text {
-    display: none;
     flex-direction: column;
 
     width: 50%;
   }
-  h1 {
-    font-size: 2rem;
+  .beranda-text h1 {
+    font-size: 2.5rem;
   }
   ul {
     position: fixed;
