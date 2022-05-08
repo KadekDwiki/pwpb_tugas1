@@ -1,6 +1,6 @@
 # Kelompok 5 XI RPL 1
 ### topik Mengenal nama nama Planet
-### [klik](https://kadekdwiki.github.io/pwpb_kadekdwiki/) 
+### [klik](https://kadekdwiki.github.io/pwpb_tugas1/) 
 anggota:
 - [I Kadek Dwiki Nusanjaya (08)](https://github.com/KadekDwiki)
 - [I Ketut Pande Suparsa (09)](https://github.com/IKetutPandeSuparsa)
