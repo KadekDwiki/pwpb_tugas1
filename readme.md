@@ -1,6 +1,6 @@
 # Kelompok 5 XI RPL 1
 ### topik Mengenal nama nama Planet
-### [klik](https://kadekdwiki.github.io/pwpb_kadekdwiki/) untuk melihat style website yang saya buat, landing page menggunakan flexbox
+### [klik](https://kadekdwiki.github.io/pwpb_kadekdwiki/) 
 anggota:
 - [I Kadek Dwiki Nusanjaya (08)](https://github.com/KadekDwiki)
 - [I Ketut Pande Suparsa (09)](https://github.com/IKetutPandeSuparsa)
